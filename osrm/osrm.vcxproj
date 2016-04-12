@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F1F4176-6798-4F2F-88FC-B2293255F036}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc;$(SolutionDir)dep/inc</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>-D_SCL_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dep/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tbb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc;$(SolutionDir)dep/inc</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>-D_SCL_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dep/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tbb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\contractor\query_edge.hpp" />
+    <ClInclude Include="inc\engine\api_response_generator.hpp" />
+    <ClInclude Include="inc\engine\datafacade\datafacade_base.hpp" />
+    <ClInclude Include="inc\engine\datafacade\internal_datafacade.hpp" />
+    <ClInclude Include="inc\engine\datafacade\shared_datafacade.hpp" />
+    <ClInclude Include="inc\engine\douglas_peucker.hpp" />
+    <ClInclude Include="inc\engine\engine.hpp" />
+    <ClInclude Include="inc\engine\engine_config.hpp" />
+    <ClInclude Include="inc\engine\geospatial_query.hpp" />
+    <ClInclude Include="inc\engine\guidance\segment_compression.hpp" />
+    <ClInclude Include="inc\engine\guidance\segment_list.hpp" />
+    <ClInclude Include="inc\engine\guidance\textual_route_annotation.hpp" />
+    <ClInclude Include="inc\engine\internal_route_result.hpp" />
+    <ClInclude Include="inc\engine\map_matching\bayes_classifier.hpp" />
+    <ClInclude Include="inc\engine\map_matching\hidden_markov_model.hpp" />
+    <ClInclude Include="inc\engine\object_encoder.hpp" />
+    <ClInclude Include="inc\engine\phantom_node.hpp" />
+    <ClInclude Include="inc\engine\plugins\hello_world.hpp" />
+    <ClInclude Include="inc\engine\plugins\trip.hpp" />
+    <ClInclude Include="inc\engine\polyline_compressor.hpp" />
+    <ClInclude Include="inc\engine\polyline_formatter.hpp" />
+    <ClInclude Include="inc\engine\route_name_extraction.hpp" />
+    <ClInclude Include="inc\engine\route_parameters.hpp" />
+    <ClInclude Include="inc\engine\routing\alternative_path.hpp" />
+    <ClInclude Include="inc\engine\routing\direct_shortest_path.hpp" />
+    <ClInclude Include="inc\engine\routing\many_to_many.hpp" />
+    <ClInclude Include="inc\engine\routing\map_matching.hpp" />
+    <ClInclude Include="inc\engine\routing\routing_base.hpp" />
+    <ClInclude Include="inc\engine\routing\shortest_path.hpp" />
+    <ClInclude Include="inc\engine\search_engine.hpp" />
+    <ClInclude Include="inc\engine\search_engine_data.hpp" />
+    <ClInclude Include="inc\engine\segment_information.hpp" />
+    <ClInclude Include="inc\engine\trip\trip_brute_force.hpp" />
+    <ClInclude Include="inc\engine\trip\trip_farthest_insertion.hpp" />
+    <ClInclude Include="inc\engine\trip\trip_nearest_neighbour.hpp" />
+    <ClInclude Include="inc\engine\trip\trip_tabu_search.hpp" />
+    <ClInclude Include="inc\extractor\edge_based_node.hpp" />
+    <ClInclude Include="inc\extractor\external_memory_node.hpp" />
+    <ClInclude Include="inc\extractor\node_based_edge.hpp" />
+    <ClInclude Include="inc\extractor\original_edge_data.hpp" />
+    <ClInclude Include="inc\extractor\query_node.hpp" />
+    <ClInclude Include="inc\extractor\restriction.hpp" />
+    <ClInclude Include="inc\extractor\tarjan_scc.hpp" />
+    <ClInclude Include="inc\extractor\travel_mode.hpp" />
+    <ClInclude Include="inc\extractor\turn_instructions.hpp" />
+    <ClInclude Include="inc\storage\shared_barriers.hpp" />
+    <ClInclude Include="inc\storage\shared_datatype.hpp" />
+    <ClInclude Include="inc\storage\shared_memory.hpp" />
+    <ClInclude Include="inc\storage\storage.hpp" />
+    <ClInclude Include="inc\util\assert.hpp" />
+    <ClInclude Include="inc\util\bearing.hpp" />
+    <ClInclude Include="inc\util\binary_heap.hpp" />
+    <ClInclude Include="inc\util\cast.hpp" />
+    <ClInclude Include="inc\util\container.hpp" />
+    <ClInclude Include="inc\util\deallocating_vector.hpp" />
+    <ClInclude Include="inc\util\dist_table_wrapper.hpp" />
+    <ClInclude Include="inc\util\exception.hpp" />
+    <ClInclude Include="inc\util\fingerprint.hpp" />
+    <ClInclude Include="inc\util\fingerprint_impl.hpp" />
+    <ClInclude Include="inc\util\for_each_pair.hpp" />
+    <ClInclude Include="inc\util\graph_loader.hpp" />
+    <ClInclude Include="inc\util\hilbert_value.hpp" />
+    <ClInclude Include="inc\util\integer_range.hpp" />
+    <ClInclude Include="inc\util\json_container.hpp" />
+    <ClInclude Include="inc\util\json_logger.hpp" />
+    <ClInclude Include="inc\util\json_renderer.hpp" />
+    <ClInclude Include="inc\util\json_util.hpp" />
+    <ClInclude Include="inc\util\make_unique.hpp" />
+    <ClInclude Include="inc\util\matching_debug_info.hpp" />
+    <ClInclude Include="inc\util\matrix_graph_wrapper.hpp" />
+    <ClInclude Include="inc\util\percent.hpp" />
+    <ClInclude Include="inc\util\rectangle.hpp" />
+    <ClInclude Include="inc\util\routed_options.hpp" />
+    <ClInclude Include="inc\util\std_hash.hpp" />
+    <ClInclude Include="inc\util\string_util.hpp" />
+    <ClInclude Include="inc\util\strong_typedef.hpp" />
+    <ClInclude Include="inc\util\timing_util.hpp" />
+    <ClInclude Include="inc\util\trigonometry_table.hpp" />
+    <ClInclude Include="inc\util\typedefs.hpp" />
+    <ClInclude Include="inc\util\version.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine\douglas_peucker.cpp" />
+    <ClCompile Include="src\engine\engine.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\engine\polyline_compressor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\engine\polyline_formatter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\engine\route_parameters.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\engine\search_engine_data.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\util\assert.cpp" />
+    <ClCompile Include="src\util\coordinate.cpp" />
+    <ClCompile Include="src\util\coordinate_calculation.cpp" />
+    <ClCompile Include="src\util\exception.cpp" />
+    <ClCompile Include="src\util\fingerprint.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\util\hilbert_value.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\util\simple_logger.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

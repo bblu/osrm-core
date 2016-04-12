@@ -1,0 +1,4 @@
+build the boost libary and copy the libs to dep\lib\
+bjam toolset=msvc-14.0 variant=release address-model=64 threading=multi link=static runtime-link=shared --prefix=D:\osrm\osrm-backend\osrm-deps\boost -sBZIP2_SOURCE="e:\source\bzip2-1.0.6" -sZLIB_SOURCE="e:\source\zlib-1.2.8" --with-atomic --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread 
+
+bjam toolset=msvc-14.0 variant=debug address-model=64 threading=multi link=static runtime-link=shared --prefix=D:\osrm\osrm-backend\osrm-deps\boost -sBZIP2_SOURCE="e:\source\bzip2-1.0.6" -sZLIB_SOURCE="e:\source\zlib-1.2.8" --with-atomic --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-unit_test --with-zlib
