@@ -1,4 +1,4 @@
-#include "util/exception.hpp"
+#include "util/osrm_exception.hpp"
 
 #include <boost/uuid/name_generator.hpp>
 #include <boost/uuid/uuid_generators.hpp>
@@ -8,10 +8,10 @@
 #include <algorithm>
 #include <string>
 
-#define MD5PREPARE "${MD5PREPARE}"
-#define MD5RTREE "${MD5RTREE}"
-#define MD5GRAPH "${MD5GRAPH}"
-#define MD5OBJECTS "${MD5OBJECTS}"
+#define MD5PREPARE "c059b1a34a045f0fcd4a3161de43a4de"
+#define MD5RTREE "620226ff218a93c86e1bbda724a2424b"
+#define MD5GRAPH "2f2d8f48ee7aa537fcddd3921dd67052"
+#define MD5OBJECTS "1b25903dc46eca0529bcd8c227dcf4b1"
 
 namespace osrm
 {
@@ -62,7 +62,7 @@ bool FingerPrint::TestGraphUtil(const FingerPrint &other) const
     return std::equal(md5_graph, md5_graph + 32, other.md5_graph);
 }
 
-bool FingerPrint::TestContractor(const FingerPrint &other) const
+bool FingerPrint::TestPrepare(const FingerPrint &other) const
 {
     if (!IsMagicNumberOK(other))
     {
